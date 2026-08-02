@@ -1,0 +1,10 @@
+.model compmossa1
+.inputs a1 a0 b1 b0
+.outputs out
+
+.subckt xnor a=a1 b=b1 x=x1
+.subckt xnor a=a0 b=b0 x=x0
+.names x1 x0 out
+11 1
+.search xnor.blif
+.end

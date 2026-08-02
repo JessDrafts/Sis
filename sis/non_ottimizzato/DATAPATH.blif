@@ -1,0 +1,58 @@
+.model DATAPATH
+.inputs PRIMO1 PRIMO0 SECONDO1 SECONDO0 INIZIA
+.outputs MANCHE1 MANCHE0 fine pobbligatorio
+
+.subckt uno uscita=uno
+.subckt zero uscita=zero
+
+.subckt concatenazione A4=zero A3=zero A2=uno A1=zero A0=zero B4=zero B3=PRIMO1 B2=PRIMO0 B1=SECONDO1 B0=SECONDO0 CIN=cin O4=somma4 O3=somma3 O2=somma2 O1=somma1 O0=somma0 COUT=cout
+
+.subckt manche s0=INIZIA i4=somma4 i3=somma3 i2=somma2 i1=somma1 i0=somma0 w4=totmanche4 w3=totmanche3 w2=totmanche2 w1=totmanche1 w0=totmanche0 o4=manche4 o3=manche3 o2=manche2 o1=manche1 o0=manche0
+.subckt regmanche A4=manche4 A3=manche3 A2=manche2 A1=manche1 A0=manche0 O4=totmanche4 O3=totmanche3 O2=totmanche2 O1=totmanche1 O0=totmanche0
+
+.subckt select x1=MANCHE1 x0=MANCHE0 a4=zero a3=zero a2=zero a1=zero a0=zero b4=zero b3=zero b2=zero b1=zero b0=uno c4=zero c3=zero c2=zero c1=zero c0=uno d4=zero d3=zero d2=zero d1=zero d0=uno o4=sel4 o3=sel3 o2=sel2 o1=sel1 o0=sel0
+
+.subckt contatore A4=sel4 A3=sel3 A2=sel2 A1=sel1 A0=sel0 B4=contatore4 B3=contatore3 B2=contatore2 B1=contatore1 B0=contatore0 CIN=Cin O4=cont4 O3=cont3 O2=cont2 O1=cont1 O0=cont0 COUT=Cout
+
+.subckt resetcontatore s0=INIZIA i4=zero i3=zero i2=zero i1=zero i0=zero w4=cont4 w3=cont3 w2=cont2 w1=cont1 w0=cont0 o4=resc4 o3=resc3 o2=resc2 o1=resc1 o0=resc0
+.subckt regcontatore A4=resc4 A3=resc3 A2=resc2 A1=resc1 A0=resc0 O4=contatore4 O3=contatore3 O2=contatore2 O1=contatore1 O0=contatore0
+
+.subckt ugualemanche a4=manche4 a3=manche3 a2=manche2 a1=manche1 a0=manche0 b4=resc4 b3=resc3 b2=resc2 b1=resc1 b0=resc0 out=fine
+.subckt comppobbligatoria a4=resc4 a3=resc3 a2=resc2 a1=resc1 a0=resc0 b4=zero b3=zero b2=zero b1=uno b0=uno o=pobbligatorio
+
+#-------------------------------------#
+
+.subckt and a1=PRIMO1 a0=PRIMO0 b1=SECONDO1 b0=SECONDO0 o1=vict1 o0=vict0
+.subckt mossa1 x1=vict1 x0=vict0 x=INIZIA e1=PRIMO1 e0=PRIMO0 a1=PRIMO1 a0=PRIMO0 b1=zero b0=zero c1=zero c0=zero d1=zero d0=zero o1=moss1 o0=moss0
+.subckt regmossa1 A1=moss1 A0=moss0 O1=first1 O0=first0
+.subckt compmossa1 a1=PRIMO1 a0=PRIMO0 b1=first1 b0=first0 out=verifica1
+
+.subckt mossa2 x1=vict1 x0=vict0 x=INIZIA e1=SECONDO1 e0=SECONDO0 a1=zero a0=zero b1=SECONDO1 b0=SECONDO0 c1=zero c0=zero d1=zero d0=zero o1=move1 o0=move0
+.subckt regmossa2 A1=move1 A0=move0 O1=second1 O0=second0
+.subckt compmossa2 a1=SECONDO1 a0=SECONDO0 b1=second1 b0=second0 out=verifica2
+
+.subckt victorymanche s3=vict1 s2=vict0 s1=verifica2 s0=verifica1 s=INIZIA i1=zero i0=uno w1=uno w0=zero x1=uno x0=uno y1=zero y0=zero z1=zero z0=zero r1=zero r0=zero g1=zero g0=zero o1=MANCHE1 o0=MANCHE0
+
+.end
+
+.search uno.blif
+.search zero.blif
+.search concatenazione.blif
+.search manche.blif
+.search regmanche.blif
+.search select.blif
+.search contatore.blif
+.search resetcontatore.blif
+.search regcontatore.blif
+.search ugualemanche.blif
+.search comppobbligatoria.blif
+.search and.blif
+.search mossa1.blif
+.search regmossa1.blif
+.search compmossa1.blif
+.search mossa2.blif
+.search regmossa2.blif
+.search compmossa2.blif
+.search victorymanche.blif
+
+

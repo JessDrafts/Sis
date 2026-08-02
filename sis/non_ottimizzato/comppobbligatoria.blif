@@ -1,0 +1,19 @@
+.model comppobbligatoria
+.inputs a4 a3 a2 a1 a0 b4 b3 b2 b1 b0
+.outputs o
+
+.subckt xor A=a4 B=b4 x=x4
+.subckt xor A=a3 B=b3 x=x3
+.subckt xor A=a2 B=b2 x=x2
+.subckt xor A=a1 B=b1 x=x1
+.subckt xor A=a0 B=b0 x=x0
+
+.names a4 a3 a2 a1 a0 x4 x3 x2 x1 x0 o
+1----1---- 1
+-1---01--- 1
+--1--001-- 1
+---1-0001- 1
+----100001 1
+
+.search xor.blif
+.end

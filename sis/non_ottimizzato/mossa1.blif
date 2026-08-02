@@ -1,0 +1,18 @@
+.model mossa1
+.inputs x1 x0 x e1 e0 a1 a0 b1 b0 c1 c0 d1 d0 
+.outputs o1 o0
+
+.names x1 x0 x e1 a1 b1 c1 d1 o1
+0001---- 1
+010-1--- 1
+100--1-- 1
+110---1- 1
+--1----1 1
+.names x1 x0 x e0 a0 b0 c0 d0 o0
+0001---- 1
+010-1--- 1
+100--1-- 1
+110---1- 1
+--1----1 1
+.end
+

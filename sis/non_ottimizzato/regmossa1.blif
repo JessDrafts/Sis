@@ -1,0 +1,8 @@
+.model regmossa1
+.inputs A1 A0
+.outputs O1 O0
+
+.subckt REGISTRO A=A1 O=O1
+.subckt REGISTRO A=A0 O=O0
+.end
+.search registro.blif

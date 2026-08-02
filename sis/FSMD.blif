@@ -1,0 +1,167 @@
+.model morracinese
+.inputs P1 P0 S1 S0 I
+.outputs MAN1 MAN0 PAR1 PAR0
+.latch    [12] LatchOut_v5   0
+.latch    [13] LatchOut_v6   1
+.latch    [14] LatchOut_v7   1
+.latch    manche4 totmanche4 re NIL 0
+.latch    manche3 totmanche3 re NIL 0
+.latch    manche2 totmanche2 re NIL 0
+.latch    manche1 totmanche1 re NIL 0
+.latch    manche0 totmanche0 re NIL 0
+.latch    moss1 first1 re NIL 0
+.latch    moss0 first0 re NIL 0
+.latch    resc4 contatore4 re NIL 0
+.latch    resc3 contatore3 re NIL 0
+.latch    resc2 contatore2 re NIL 0
+.latch    resc1 contatore1 re NIL 0
+.latch    resc0 contatore0 re NIL 0
+.latch    move1 second1 re NIL 0
+.latch    move0 second0 re NIL 0
+.names I vict1 verifica1 verifica2 MAN1
+0100 1
+.names I vict0 verifica1 verifica2 MAN0
+0100 1
+.names MAN1 FINE POBBLIGATORIO LatchOut_v6 [319] [324] [329] [333] PAR1
+-1-0-1-- 1
+11----1- 1
+--101--0 1
+.names MAN1 MAN0 FINE POBBLIGATORIO LatchOut_v7 [320] [321] [329] PAR0
+1-1-0--- 1
+-11--1-- 1
+---1--10 1
+.names resc1 resc0 manche1 manche0 [294] FINE
+11111 1
+01011 1
+10101 1
+00001 1
+.names resc4 resc3 resc2 POBBLIGATORIO
+1-- 1
+-1- 1
+--1 1
+.names MAN0 POBBLIGATORIO LatchOut_v5 LatchOut_v6 LatchOut_v7 [13] [320] [321] \
+[324] [325] [333] [334] [12]
+--------1--- 1
+---------11- 1
+--1--------1 1
+1----01----- 1
+0---1--0---- 1
+1100-------- 1
+.names I MAN1 MAN0 PAR1 PAR0 POBBLIGATORIO LatchOut_v6 LatchOut_v7 [14] [321] \
+[325] [333] [13]
+1----------- 1
+---1-------- 1
+----11------ 1
+--1------0-- 1
+------1---0- 1
+-0---------1 1
+--0---10---- 1
+-10-----0--- 1
+.names I MAN0 PAR0 FINE POBBLIGATORIO LatchOut_v6 LatchOut_v7 [319] [321] \
+[329] [333] [14]
+1---------- 1
+--11------- 1
+------10--- 1
+--------01- 1
+------1---1 1
+-0-1--1---- 1
+----001---- 1
+.names P1 P0 S1 S0 vict0 vict1
+101-- 1
+1-11- 1
+-101- 1
+-11-0 1
+.names P1 P0 S1 S0 [326] vict0
+1-10- 1
+-1-11 1
+-0-10 1
+.names P1 P0 first1 first0 verifica1
+1111 1
+0101 1
+1010 1
+0000 1
+.names S1 S0 second1 second0 verifica2
+1111 1
+0101 1
+1010 1
+0000 1
+.names I contatore4 [327] resc4
+-00 1
+011 1
+.names I [115] contatore3 resc3
+-10 1
+001 1
+.names I resc1 [115] contatore2 contatore1 resc2
+0-01- 1
+00-01 1
+.names I resc0 contatore1 contatore0 [334] resc1
+-11-- 1
+--1-1 1
+0001- 1
+.names contatore0 [319] [334] resc0
+01- 1
+1-1 1
+.names P1 P0 I totmanche4 manche4
+--01 1
+111- 1
+.names P1 P0 I totmanche3 manche3
+--01 1
+011- 1
+101- 1
+.names P0 I totmanche2 manche2
+01- 1
+-01 1
+.names S1 I totmanche1 manche1
+11- 1
+-01 1
+.names S0 I totmanche0 manche0
+11- 1
+-01 1
+.names contatore2 contatore1 contatore0 [319] [115]
+1111 1
+.names P1 I vict1 moss1
+100 1
+.names P0 I vict1 moss0
+100 1
+.names S1 I vict0 move1
+100 1
+.names S0 I vict0 move0
+100 1
+.names POBBLIGATORIO resc4 resc3 resc2 manche4 manche3 manche2 [294]
+0---000 1
+-111111 1
+-011011 1
+-101101 1
+-001001 1
+-110110 1
+-010010 1
+-100100 1
+.names MAN1 MAN0 [319]
+1- 1
+-1 1
+.names MAN1 LatchOut_v6 [320]
+0- 1
+-1 1
+.names MAN1 LatchOut_v6 [321]
+0- 1
+-0 1
+.names PAR0 POBBLIGATORIO [320] [324]
+1-- 1
+-10 1
+.names MAN1 LatchOut_v7 [325]
+1- 1
+-0 1
+.names P1 S1 [326]
+0- 1
+-1 1
+.names [115] contatore3 [327]
+0- 1
+-0 1
+.names MAN0 LatchOut_v7 [329]
+0- 1
+-1 1
+.names MAN0 LatchOut_v5 [333]
+11 1
+.names I [319] [334]
+00 1
+.end

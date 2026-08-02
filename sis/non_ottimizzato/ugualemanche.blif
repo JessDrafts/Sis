@@ -1,0 +1,12 @@
+.model ugualemanche
+.inputs a4 a3 a2 a1 a0 b4 b3 b2 b1 b0
+.outputs out
+.subckt xnor a=a4 b=b4 x=x4
+.subckt xnor a=a3 b=b3 x=x3
+.subckt xnor a=a2 b=b2 x=x2
+.subckt xnor a=a1 b=b1 x=x1
+.subckt xnor a=a0 b=b0 x=x0
+.names x4 x3 x2 x1 x0 out
+11111 1
+.search xnor.blif
+.end

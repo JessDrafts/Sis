@@ -24,11 +24,12 @@ Download the repo and unzip it.
   Inside the sis directory you'll find:
   * non_ottimizzato folder
   * FSMD.blif
-  * output_sis.txt
+  * output_sis.txt (delete/rename it before runngi the programm)
   * testbench.script
   
   ```console
-  cd sis
+  Console » cd sis
+  Console » sis -f testbench.script -x | grep Outputs: > output_sis.txt
   ```
   
 * Verilog Version:
@@ -39,6 +40,11 @@ Download the repo and unzip it.
     
   Copy 'design.sv' and 'testbench.sv' to EDA Playground and click the RUN button. It will automatically download the .zip with source codes and output.txt file.
     
-Both Version's output must be identical
+Both Version's output must be identical. To check copy both output.txt file to the same location then run the following line:
+
+```console
+Console » diff output_sis.txt output_verilog.txt
+// if it don't print anything both outputs are same
+```
 
 ## 🎥Demo

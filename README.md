@@ -28,8 +28,7 @@ Download the repo and unzip it.
   * testbench.script
   
   ```console
-  var s = "JavaScript syntax highlighting";
-  alert(s);
+  cd sis
   ```
   
 * Verilog Version:

@@ -19,10 +19,16 @@ It consists of building a circut to play rock-paper-scissors. Relazione.pdf has 
       * Select 'Open EPWave after run'
 
 ## 💻Run the project  
+Download the repo and unzip it.
 * SIS version:
   
 * Verilog Version:
-  
+  Inside the Verilog directory you'll find:
+  * design.sv
+  * testbench.sv
+  * output_verilog.txt
+    Copy 'design.sv' and 'testbench.sv' to EDA Playground and click the RUN button. It will automatically download the .zip with source codes and output.txt file.
+    
 Both Version's output must be identical
 
 ## 🎥Demo

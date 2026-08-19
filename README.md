@@ -19,5 +19,10 @@ It consists of building a circut to play rock-paper-scissors. Relazione.pdf has 
       * Select 'Open EPWave after run'
 
 ## 💻Run the project  
+* SIS version:
+  
+* Verilog Version:
+  
+Both Version's output must be identical
 
 ## 🎥Demo

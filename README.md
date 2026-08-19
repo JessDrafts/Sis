@@ -27,7 +27,7 @@ Download the repo and unzip it.
   * output_sis.txt
   * testbench.script
   
-  ```javascript
+  ```console
   var s = "JavaScript syntax highlighting";
   alert(s);
   ```

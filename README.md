@@ -2,6 +2,31 @@
 
 This project was made for the Computer Architecture's course of the University of Verona year 2023/2024.  
 It consists of building a circut to play rock-paper-scissors. Relazione.pdf has all the documentation and Requirements needed (in italian).
+Inputs: ( _ _ _ _ _ )
+* 1°, 2°: first player's move
+* 3°, 4°: second player's move
+* 5°: start (if it is 1 the system is resetted)
+
+Outputs: ( _ _ _ _ )
+* 1°, 2°: result of the last played set
+* 3°, 4°: result of the game
+  * Sets:
+    * 00: not valid
+    * 01: player one won
+    * 10: player two won
+    * 11: tie
+  * Game:
+    * 00: game not ended
+    * 01: game ended & player one won
+    * 10: game ended & player two won
+    * 11: game ended & tie
+Moves:
+* 00: no move
+* 01: Rock
+* 10: Paper
+* 11: Scissor
+
+The first four bit of the input is the number of sets per game. Minimum number of sets by default is four. For example 0001 means four default sets + 1, so in total five sets.
 
 ## ⚙️Tools
 * SIS is an interactive tool for synthesis and optimization of sequential circuits developed by the CAD group of U.C. Berkeley - [Documentation](https://www2.eecs.berkeley.edu/Pubs/TechRpts/1992/2010.html)
@@ -48,3 +73,9 @@ Console » diff output_sis.txt output_verilog.txt
 ```
 
 ## 🎥Demo
+To play the game:
+```console
+Console » sis
+UC Berkeley, SIS 1.3.6
+sis> 
+```

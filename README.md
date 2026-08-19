@@ -24,8 +24,8 @@ Download the repo and unzip it.
   
 * Verilog Version:
   Inside the Verilog directory you'll find:
-  * design.sv
-  * testbench.sv
+  * design.sv: source code for the circuit 
+  * testbench.sv: simulates the circut
   * output_verilog.txt
     
   Copy 'design.sv' and 'testbench.sv' to EDA Playground and click the RUN button. It will automatically download the .zip with source codes and output.txt file.

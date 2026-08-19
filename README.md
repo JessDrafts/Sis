@@ -21,6 +21,7 @@ Outputs: ( _ _ _ _ )
     * 01: game ended & player one won
     * 10: game ended & player two won
     * 11: game ended & tie
+
 Moves:
 * 00: no move
 * 01: Rock
@@ -76,7 +77,11 @@ Console » diff output_sis.txt output_verilog.txt
 ## 🎥Demo
 To play the game:
 ```console
+Console » cd sis
 Console » sis
 UC Berkeley, SIS 1.3.6
-sis> 
+sis> read_blif FSMD.blif
+sis> simulate 0 0 0 0 1 // you can copy a game from testbench.scrpit
 ```
+
+https://github.com/user-attachments/assets/dd013ab3-ea52-46fd-a9e0-16a5b7ce67e2
